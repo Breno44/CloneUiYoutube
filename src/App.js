@@ -1,7 +1,32 @@
 import "./App.css";
+import { ThemeProvider, createTheme, makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  root: {
+    background: "red",
+    height: "100vh",
+  },
+});
 
 function App() {
-  return <div></div>;
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#f44336",
+      },
+      secondary: {
+        main: "#3f51b5",
+      },
+    },
+  });
+
+  const classes = useStyles();
+
+  return (
+    <ThemeProvider theme={theme}>
+      <div className={classes.root}></div>
+    </ThemeProvider>
+  );
 }
 
 export default App;
