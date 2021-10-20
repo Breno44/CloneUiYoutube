@@ -1,11 +1,8 @@
-import "./App.css";
 import { ThemeProvider, createTheme, makeStyles } from "@material-ui/core";
+import Home from "./Home";
 
 const useStyles = makeStyles({
-  root: {
-    background: "red",
-    height: "100vh",
-  },
+  root: {},
 });
 
 function App() {
@@ -24,7 +21,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className={classes.root}></div>
+      <Home />
     </ThemeProvider>
   );
 }
